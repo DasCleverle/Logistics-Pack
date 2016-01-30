@@ -9,6 +9,9 @@
 #define IDC_BTN_MOVE10      21507
 #define IDC_BTN_MOVEALL     21508
 
+#define IDC_GRP_MAIN        21509
+#define IDC_GRP_MODAL       21540
+
 // Positioning
 #define DIALOG_X (safeZoneX + (safeZoneW - DIALOG_WIDTH) / 2)
 #define DIALOG_Y (safeZoneY + (safeZoneH - DIALOG_HEIGHT) / 2)

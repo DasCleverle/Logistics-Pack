@@ -13,3 +13,4 @@ class CfgPatches {
 };
 
 #include "dialog.hpp"
+#include "CfgFunctions.hpp"

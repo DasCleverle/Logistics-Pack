@@ -61,6 +61,8 @@ class GVAR(grpMain) : RscControlsGroupNoScrollbars {
         class lstBoxes : RscListbox {
             idc = IDC_LST_BOXES;
 
+            onLBDblClick = _this call FUNC(openModal);
+
             CELL(0.5,1.5);
             CELLSPAN(11,8.5);
         };
@@ -70,6 +72,8 @@ class GVAR(grpMain) : RscControlsGroupNoScrollbars {
             sizeEx = CELL_FONTSIZE;
             text = "Open Modal";
 
+            onButtonClick = _this call FUNC(openModal);
+
             CELL(0.5,10.5);
             CELLSPAN(11,1);
         };
@@ -77,9 +81,10 @@ class GVAR(grpMain) : RscControlsGroupNoScrollbars {
 };
 
 class GVAR(grpModal) : RscControlsGroupNoScrollbars {
-    idc = IDC_GRP_MODAL;
+    idc = -1;
+    onLoad = _this call FUNC(modal_onLoad);
 
-    DIALOG_POS_DIM;
+    GRP_POS_DIM;
 
     class controls {
         class background : GVAR(background) {};
@@ -125,6 +130,7 @@ class GVAR(grpModal) : RscControlsGroupNoScrollbars {
 
 class GVAR(dialog) {
     idd = IDD_ITEMEXCHANGE;
+    onLoad = _this call FUNC(dialog_onLoad);
 
     class controls {
         class grpMain : GVAR(grpMain) {};

@@ -1,8 +1,9 @@
 class CfgFunctions {
     class ADDON {
         class common {
-            FUNCFILE(common);
+            file = FUNCFILE(common);
+
             class preInit { preInit = 1 };
-        }
-    }
+        };
+    };
 };
