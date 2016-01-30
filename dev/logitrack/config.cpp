@@ -11,3 +11,8 @@ class CfgPatches {
         VERSION_CONFIG;
     };
 };
+
+#include "dialog.hpp"
+#include "CfgFunctions.hpp"
+#include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"

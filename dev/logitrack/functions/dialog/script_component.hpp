@@ -1,0 +1,1 @@
+#include "\x\cl\addons\logitrack\script_component.hpp"

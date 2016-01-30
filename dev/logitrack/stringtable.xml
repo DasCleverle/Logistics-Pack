@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="DLP">
+	<Package name="LogiTrack">
+		<Container ID="common">
+			<Key ID="STR_CL_LOGITRACK_STATUSHINT">
+				<Original>Status of %1 set to %2</Original>
+				<English>Status of %1 set to %2</English>
+				<German>Status von %1 auf %2 gesetzt</German>
+			</Key>
+			<Key ID="STR_CL_LOGITRACK_HOTKEY_STATUS_HINT">
+				<Original>Own status set to %1</Original>
+				<English>Own status set to %1</English>
+				<German>Eigener Status auf %1 gesetzt</German>
+			</Key>
+			<Key ID="STR_CL_LOGITRACK_KEYBIND_OPENTRACKER">
+				<Original>[LT] Open LogiTracker</Original>
+				<English>[LT] Open LogiTracker</English>
+				<German>[LT] LogiTracker öffnen</German>
+			</Key>
+			<Key ID="STR_CL_LOGITRACK_KEYBIND_SETSTATUS">
+				<Original>[LT] Set Status %1</Original>
+				<English>[LT] Set Status %1</English>
+				<German>[LT] Status %1 setzen</German>
+			</Key>
+		</Container>
+		<Container ID="Descriptions">
+			<Key ID="STR_CL_LOGITRACK_ITEMDESC">
+				<Original>Enables usage of LogiTrack.</Original>
+				<English>Enables usage of LogiTrack.</English>
+				<German>Macht die Benutzung von LogiTrack möglich.</German>
+			</Key>
+		</Container>
+		<Container ID="Colors">
+			<Key ID="STR_CL_LOGITRACK_LCOLOR_GREEN">
+				<Original>Green</Original>
+				<English>Green</English>
+				<German>Grün</German>
+			</Key>
+			<Key ID="STR_CL_LOGITRACK_LCOLOR_YELLOW">
+				<Original>Yellow</Original>
+				<English>Yellow</English>
+				<German>Gelb</German>
+			</Key>
+			<Key ID="STR_CL_LOGITRACK_LCOLOR_RED">
+				<Original>Red</Original>
+				<English>Red</English>
+				<German>Rot</German>
+			</Key>
+		</Container>
+		<Container ID="Status Tooltips">
+			<Key ID="STR_CL_LOGITRACK_TOOLTIP_1">
+				<Original>available (radio)</Original>
+				<English>available (radio)</English>
+				<German>Verfügbar (Funk)</German>
+			</Key>
+			<Key ID="STR_CL_LOGITRACK_TOOLTIP_2">
+				<Original>available (base)</Original>
+				<English>available (base)</English>
+				<German>Verfügbar (Basis)</German>
+			</Key>
+			<Key ID="STR_CL_LOGITRACK_TOOLTIP_3">
+				<Original>preparations</Original>
+				<English>preparations</English>
+				<German>Vorbereitungen</German>
+			</Key>
+			<Key ID="STR_CL_LOGITRACK_TOOLTIP_4">
+				<Original>departure to supply point</Original>
+				<English>departure to supply point</English>
+				<German>Abfahrt zum Versorgungspunkt</German>
+			</Key>
+			<Key ID="STR_CL_LOGITRACK_TOOLTIP_5">
+				<Original>arrival at supply point</Original>
+				<English>arrival at supply point</English>
+				<German>Ankunft am Versorgungspunkt</German>
+			</Key>
+			<Key ID="STR_CL_LOGITRACK_TOOLTIP_6">
+				<Original>not available</Original>
+				<English>not available</English>
+				<German>Nicht verfügbar</German>
+			</Key>
+			<Key ID="STR_CL_LOGITRACK_TOOLTIP_7">
+				<Original>(transport) cargo loaded</Original>
+				<English>(transport) cargo loaded</English>
+				<German>(Transport) Gut geladen</German>
+			</Key>
+			<Key ID="STR_CL_LOGITRACK_TOOLTIP_8">
+				<Original>(transport) cargo unloaded</Original>
+				<English>(transport) cargo unloaded</English>
+				<German>(Transport) Gut abgeladen</German>
+			</Key>
+		</Container>
+		<Container ID="Status Colors">
+			<Key ID="STR_CL_LOGITRACK_COLOR_1">
+				<Original>Status 1 Color</Original>
+				<English>Status 1 Color</English>
+				<German>Farbe Status 1</German>
+			</Key>
+			<Key ID="STR_CL_LOGITRACK_COLOR_2">
+				<Original>Status 2 Color</Original>
+				<English>Status 2 Color</English>
+				<German>Farbe Status 2</German>
+			</Key>
+			<Key ID="STR_CL_LOGITRACK_COLOR_3">
+				<Original>Status 3 Color</Original>
+				<English>Status 3 Color</English>
+				<German>Farbe Status 3</German>
+			</Key>
+			<Key ID="STR_CL_LOGITRACK_COLOR_4">
+				<Original>Status 4 Color</Original>
+				<English>Status 4 Color</English>
+				<German>Farbe Status 4</German>
+			</Key>
+			<Key ID="STR_CL_LOGITRACK_COLOR_5">
+				<Original>Status 5 Color</Original>
+				<English>Status 5 Color</English>
+				<German>Farbe Status 5</German>
+			</Key>
+			<Key ID="STR_CL_LOGITRACK_COLOR_6">
+				<Original>Status 6 Color</Original>
+				<English>Status 6 Color</English>
+				<German>Farbe Status 6</German>
+			</Key>
+			<Key ID="STR_CL_LOGITRACK_COLOR_7">
+				<Original>Status 7 Color</Original>
+				<English>Status 7 Color</English>
+				<German>Farbe Status 7</German>
+			</Key>
+			<Key ID="STR_CL_LOGITRACK_COLOR_8">
+				<Original>Status 8 Color</Original>
+				<English>Status 8 Color</English>
+				<German>Farbe Status 8</German>
+			</Key>
+		</Container>
+	</Package>
+</Project>
