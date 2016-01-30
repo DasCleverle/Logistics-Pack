@@ -17,4 +17,6 @@
 #define COLOR_YELLOW     1,1,0.3,1
 #define COLOR_RED        0.75,0.1,0.1,1
 #define COLOR_RED_DARK   0.5,0.1,0.1,1
+#define COLOR_GREY_BRIGHT 0.4,0.4,0.4,0.9
+
 #define COLOR_PROFILE    "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])","(profilenamespace getvariable ['GUI_BCG_RGB_A',0.9])"

@@ -5,7 +5,15 @@ params ["_display"];
 
 private _lstBoxes = _display displayCtrl IDC_LST_BOXES;
 private _btnHeader = _display displayCtrl IDC_BTN_HEADER;
+private _btnClose = _display displayCtrl IDC_BTN_CLOSE;
+
 _btnHeader ctrlSetText "ItemExchange";
+_btnHeader ctrlAddEventHandler ["MouseButtonDown", [IDC_GRP_MAIN] call FUNC(btnHeader_MouseDown)];
+_btnHeader ctrlAddEventHandler ["MouseButtonUp", FUNC(btnHeader_MouseUp)];
+_btnHeader ctrlAddEventHandler ["MouseMoving", FUNC(btnHeader_MouseMoving)];
+
+_btnClose ctrlAddEventHandler ["ButtonClick", { closeDialog 0; }];
+_btnClose ctrlSetTooltip "Warning: This will close the whole dialog.";
 
 _counter = 1;
 {

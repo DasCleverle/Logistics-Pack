@@ -9,7 +9,7 @@ class GVAR(Background) : IGUIBack {
     w = DIALOG_WIDTH - CELL_MARGIN;
     h = DIALOG_HEIGHT - 4/3 * CELL_MARGIN;
 
-    colorBackground[] = {COLOR_BLACK_TR50};
+    colorBackground[] = {COLOR_GREY_BRIGHT};
 };
 
 class GVAR(grpHeader) : RscControlsGroupNoScrollbars {

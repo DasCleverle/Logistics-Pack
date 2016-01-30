@@ -4,7 +4,14 @@ class CfgFunctions {
             file = FUNCFILE(dialog);
 
             class dialog_onLoad {};
+
+            class modal_onLoad {};
+            class closeModal {};
             class openModal {};
+
+            class btnHeader_MouseDown {};
+            class btnHeader_MouseUp {};
+            class btnHeader_MouseMoving {};
         };
 
         class keybind {
@@ -20,12 +27,8 @@ class CfgFunctions {
 
             class getAllItems {};
             class getItemName {};
-        };
 
-        class modals {
-            file = FUNCFILE(modals);
-
-            class modal_onLoad {};
+            class pfhDeleteQueue {};
         };
     };
 };
