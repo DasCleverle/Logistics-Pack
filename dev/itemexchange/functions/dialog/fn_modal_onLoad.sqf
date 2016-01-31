@@ -18,14 +18,24 @@ _btnHeader ctrlAddEventHandler ["MouseMoving", FUNC(btnHeader_MouseMoving)];
 _btnHeader ctrlSetText (_lstBoxes lbText _boxIndex);
 
 private _btnClose = _modal controlsGroupCtrl IDC_BTN_CLOSE;
-_btnClose ctrlAddEventHandler ["MouseButtonUp", [ctrlIDC _modal] call FUNC(closeModal)];
+_btnClose ctrlAddEventHandler ["ButtonClick", [ctrlIDC _modal] call FUNC(closeModal)];
+
+private _btnSelect = _modal controlsGroupCtrl IDC_BTN_SELECT;
+_btnSelect ctrlAddEventHandler ["ButtonClick", [ctrlIDC _modal] call FUNC(btnSelect_click)];
+
+private _chkSelect = _modal controlsGroupCtrl IDC_CHK_SELECT;
+_chkSelect ctrlAddEventHandler ["CheckedChanged", [ctrlIDC _modal] call FUNC(chkSelect_changed)];
 
 private _lstItems = _modal controlsGroupCtrl IDC_LST_ITEMS;
-private _items = [_box] call FUNC(getAllItems);
+_lstItems ctrlAddEventHandler ["LBDblClick", [ctrlIDC _modal, 1] call FUNC(dialog_moveItems)];
 
 {
-    private _itemName = [_x] call FUNC(getItemName);
-    private _count = (_items select 1) select _foreachIndex;
+    _x params ["_idc", "_count"];
+    (_modal controlsGroupCtrl _idc) ctrlAddEventHandler ["ButtonClick", [ctrlIDC _modal, _count] call FUNC(dialog_moveItems)];
+} foreach [
+    [IDC_BTN_MOVE1, 1],
+    [IDC_BTN_MOVE10, 10],
+    [IDC_BTN_MOVEALL, -1]
+];
 
-    _lstItems lbAdd format ["%1x %2", _count, _itemName];
-} foreach (_items select 0);
+GVAR(itemLists) pushBack [_lstItems, _box];

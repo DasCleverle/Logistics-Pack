@@ -2,3 +2,4 @@
 
 GVAR(currentModalIDC) = IDC_GRP_MODAL;
 GVAR(modals) = [];
+GVAR(selectedBoxes) = [];

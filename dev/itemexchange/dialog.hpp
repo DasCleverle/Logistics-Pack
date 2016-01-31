@@ -2,6 +2,14 @@ class IGUIBack;
 class RscButton;
 class RscControlsGroupNoScrollbars;
 class RscListbox;
+class RscCheckbox;
+
+class GVAR(ButtonSilent) : RscButton {
+    soundEnter[] = {"",0,0};
+    soundPush[] = {"",0,0};
+    soundClick[] = {"",0,0};
+    soundEscape[] = {"",0,0};
+};
 
 class GVAR(Background) : IGUIBack {
     idc = -1;
@@ -19,18 +27,16 @@ class GVAR(grpHeader) : RscControlsGroupNoScrollbars {
     CELLSPAN(12,1);
 
     class controls {
-        class btnHeader : RscButton {
+        class btnHeader : GVAR(ButtonSilent) {
             idc = IDC_BTN_HEADER;
             CELL(0,0);
             CELLSPAN(11,1);
 
+            sizeEx = CELL_FONTSIZE;
+
             colorBackground[] = {COLOR_PROFILE};
             colorBackgroundActive[] = {COLOR_PROFILE};
             colorFocused[] = {COLOR_PROFILE};
-            soundEnter[] = {"",0,0};
-            soundPush[] = {"",0,0};
-            soundClick[] = {"",0,0};
-            soundEscape[] = {"",0,0};
         };
 
         class btnClose : RscButton {
@@ -98,8 +104,30 @@ class GVAR(grpModal) : RscControlsGroupNoScrollbars {
             CELLSPAN(11,8.5);
         };
 
+        class chkSelect : RscCheckbox {
+            idc = IDC_CHK_SELECT;
+
+            CELL(0.5,10.5);
+            CELLSPAN(1,1);
+        };
+
+        class btnSelect : GVAR(ButtonSilent) {
+            idc = IDC_BTN_SELECT;
+            text = "Select";
+            sizeEx = CELL_FONTSIZE;
+            shadow = 0;
+            style = 0;
+
+            CELL(1.2,10.5);
+            CELLSPAN(5,1);
+
+            colorBackground[] = {COLOR_TR};
+            colorBackgroundActive[] = {COLOR_TR};
+            colorFocused[] = {COLOR_TR};
+        };
+
         class btnMove1 : RscButton {
-            idc = -1;
+            idc = IDC_BTN_MOVE1;
             text = "1";
             sizeEx = CELL_FONTSIZE;
 
@@ -108,7 +136,7 @@ class GVAR(grpModal) : RscControlsGroupNoScrollbars {
         };
 
         class btnMove10 : RscButton {
-            idc = -1;
+            idc = IDC_BTN_MOVE10;
             text = "10";
             sizeEx = CELL_FONTSIZE;
 
@@ -117,7 +145,7 @@ class GVAR(grpModal) : RscControlsGroupNoScrollbars {
         };
 
         class btnMoveAll : RscButton {
-            idc = -1;
+            idc = IDC_BTN_MOVEALL;
             text = "All";
             sizeEx = CELL_FONTSIZE;
 
@@ -131,6 +159,7 @@ class GVAR(grpModal) : RscControlsGroupNoScrollbars {
 class GVAR(dialog) {
     idd = IDD_ITEMEXCHANGE;
     onLoad = _this call FUNC(dialog_onLoad);
+    onUnload = _this call FUNC(dialog_onUnload);
 
     class controls {
         class grpMain : GVAR(grpMain) {};

@@ -1,9 +1,6 @@
 #include "script_component.hpp"
 
 params ["_className"];
+private _configBase = [_className] call FUNC(getItemConfigBase);
 
-{
-    if(isClass (configFile >> _x >> _className)) exitWith {
-        getText (configFile >> _x >> _className >> "displayName");
-    };
-} foreach ["CfgWeapons", "CfgMagazines", "CfgVehicles"];
+getText (configFile >> _configBase >> _className >> "displayName");

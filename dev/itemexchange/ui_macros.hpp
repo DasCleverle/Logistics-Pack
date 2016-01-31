@@ -8,6 +8,8 @@
 #define IDC_BTN_MOVE1       21506
 #define IDC_BTN_MOVE10      21507
 #define IDC_BTN_MOVEALL     21508
+#define IDC_CHK_SELECT      21510
+#define IDC_BTN_SELECT      21511
 
 #define IDC_GRP_MAIN        21509
 #define IDC_GRP_MODAL       21540

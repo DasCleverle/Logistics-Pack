@@ -4,10 +4,15 @@ class CfgFunctions {
             file = FUNCFILE(dialog);
 
             class dialog_onLoad {};
+            class dialog_onUnload {};
+            class dialog_moveItems {};
 
             class modal_onLoad {};
             class closeModal {};
             class openModal {};
+
+            class btnSelect_click {};
+            class chkSelect_changed {};
 
             class btnHeader_MouseDown {};
             class btnHeader_MouseUp {};
@@ -27,8 +32,12 @@ class CfgFunctions {
 
             class getAllItems {};
             class getItemName {};
+            class getItemConfigBase {};
+            class getRealItemCount {};
+            class moveItems {};
 
             class pfhDeleteQueue {};
+            class pfhRefreshLists {};
         };
     };
 };
