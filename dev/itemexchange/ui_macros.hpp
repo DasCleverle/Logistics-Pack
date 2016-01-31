@@ -1,4 +1,4 @@
-#define IDC_ITEMEXCHANGE    21500
+#define IDD_ITEMEXCHANGE    21500
 
 #define IDC_BTN_HEADER      21501
 #define IDC_BTN_CLOSE       21502

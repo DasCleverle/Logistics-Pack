@@ -32,6 +32,8 @@ class CfgFunctions {
             class initModule {};
             class postInit { postInit = 1; };
 
+            class getRandomColor {};
+
             class getAllItems {};
             class getItemName {};
             class getItemConfigBase {};

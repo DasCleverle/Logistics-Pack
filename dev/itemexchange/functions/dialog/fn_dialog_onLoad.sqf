@@ -18,8 +18,15 @@ _btnClose ctrlSetTooltip "Warning: This will close the whole dialog.";
 _counter = 1;
 {
     if(getText (configFile >> "CfgVehicles" >> typeOf _x >> "vehicleClass") == "Ammo") then {
-        _displayName = getText(configFile >> "CfgVehicles" >> typeOf _x >> "displayName");
-        _item = _lstBoxes lbAdd format ["(%2) %1", _displayName, _counter];
+        private _displayName = getText(configFile >> "CfgVehicles" >> typeOf _x >> "displayName");
+        private _item = _lstBoxes lbAdd format ["(%2) %1", _displayName, _counter];
+        private _color = [] call FUNC(getRandomColor);
+
+        _lstBoxes lbSetPicture [_item, QDATAPATH(icon_dot.paa)];
+        _lstBoxes lbSetPictureColor [_item, _color];
+        _lstBoxes lbSetPictureColorSelected [_item, _color];
+
+        GVAR(dots) pushBack [_counter, _color, visiblePosition _x];
 
         missionNamespace setVariable [QGVAR(box) + str _item, _x];
         _x setVariable [QGVAR(boxIndex), _item];
