@@ -15,8 +15,8 @@
 #define IDC_GRP_MODAL       21540
 
 // Positioning
-#define DIALOG_X (safeZoneX + (safeZoneW - DIALOG_WIDTH) / 2)
-#define DIALOG_Y (safeZoneY + (safeZoneH - DIALOG_HEIGHT) / 2)
+#define DIALOG_X (safeZoneX + 1.5 * GUIMIN_3_2(1.2, 25))
+#define DIALOG_Y (safeZoneY + 4/3 * 1.5 * GUIMIN_3_2(1.2, 25))
 #define DIALOG_WIDTH (0.75 * GUIMIN_3_2(1.2, 2))
 #define DIALOG_HEIGHT (1.25 * GUIMIN_3_2(1.2, 2))
 
