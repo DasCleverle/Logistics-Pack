@@ -21,6 +21,8 @@ class CfgFunctions {
 
         class keybind {
             file = FUNCFILE(keybind);
+
+            class openMenu {};
         };
 
         class main {
