@@ -10,7 +10,7 @@ compile format ['
     GVAR(modals) deleteAt (GVAR(modals) find _boxIndex);
 
     private _box = missionNamespace getVariable (QGVAR(modal_box) + "%1");
-    private _checkbox = (_firstBox getVariable [QGVAR(checkbox), [controlNull]]);
+    private _checkbox = (_box getVariable [QGVAR(checkbox), [controlNull]]);
     (_checkbox select 0) cbSetChecked false;
     GVAR(selectedBoxes) deleteAt (GVAR(selectedBoxes) find _box);
 ', _idc];

@@ -22,7 +22,7 @@ addMissionEventHandler ["Draw3D", {
             _color,
             _copyPos,
             1, 1, 0,
-            str _id, 1, 0.05, "PuristaMedium"
+            str _id, 2, 0.05, "PuristaMedium"
         ];
     } forEach GVAR(dots);
 }];

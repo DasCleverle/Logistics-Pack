@@ -3,6 +3,7 @@ class RscButton;
 class RscControlsGroupNoScrollbars;
 class RscListbox;
 class RscCheckbox;
+class RscProgress;
 
 class GVAR(ButtonSilent) : RscButton {
     soundEnter[] = {"",0,0};
@@ -70,7 +71,7 @@ class GVAR(grpMain) : RscControlsGroupNoScrollbars {
             onLBDblClick = _this call FUNC(openModal);
 
             CELL(0.5,1.5);
-            CELLSPAN(11,8.5);
+            CELLSPAN(11,9.5);
         };
 
         class btnOpenModal : RscButton {
@@ -80,7 +81,7 @@ class GVAR(grpMain) : RscControlsGroupNoScrollbars {
 
             onButtonClick = _this call FUNC(openModal);
 
-            CELL(0.5,10.5);
+            CELL(0.5,11.5);
             CELLSPAN(11,1);
         };
     };
@@ -151,6 +152,15 @@ class GVAR(grpModal) : RscControlsGroupNoScrollbars {
 
             CELL(9.5,10.5);
             CELLSPAN(2,1);
+        };
+
+        class prgLoad : RscProgress {
+            idc = IDC_PRG_LOAD;
+            colorBar[] = {COLOR_WHITE};
+            colorFrame[] = {COLOR_WHITE};
+
+            CELL(0.5,11.5);
+            CELLSPAN(11,1);
         };
     };
 };

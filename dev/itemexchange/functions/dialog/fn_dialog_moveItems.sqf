@@ -21,4 +21,6 @@ compile format ['
     private _sourceItem = _sourceItems select _sourceItemIndex;
 
     [_sourceItem, %2, _sourceBox, _targetBox] call FUNC(moveItems);
+
+    [] call FUNC(prgLoad_refresh);
 ', _idc, _count];

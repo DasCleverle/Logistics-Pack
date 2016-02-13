@@ -10,6 +10,7 @@
 #define IDC_BTN_MOVEALL     21508
 #define IDC_CHK_SELECT      21510
 #define IDC_BTN_SELECT      21511
+#define IDC_PRG_LOAD        21512
 
 #define IDC_GRP_MAIN        21509
 #define IDC_GRP_MODAL       21540
@@ -18,7 +19,7 @@
 #define DIALOG_X (safeZoneX + 1.5 * GUIMIN_3_2(1.2, 25))
 #define DIALOG_Y (safeZoneY + 4/3 * 1.5 * GUIMIN_3_2(1.2, 25))
 #define DIALOG_WIDTH (0.75 * GUIMIN_3_2(1.2, 2))
-#define DIALOG_HEIGHT (1.25 * GUIMIN_3_2(1.2, 2))
+#define DIALOG_HEIGHT (1.35 * GUIMIN_3_2(1.2, 2))
 
 #define GRP_X (0)
 #define GRP_Y (0)
@@ -26,7 +27,7 @@
 #define GRP_HEIGHT DIALOG_HEIGHT
 
 #define COLUMNS 12
-#define ROWS 12
+#define ROWS 13
 
 #define CELL_MARGIN (0.1 * GUIMIN_3_2(1.2, 25))
 #define CELL_WIDTH (GRP_WIDTH / COLUMNS)

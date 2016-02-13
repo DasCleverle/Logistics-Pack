@@ -38,4 +38,6 @@ _lstItems ctrlAddEventHandler ["LBDblClick", [ctrlIDC _modal, 1] call FUNC(dialo
     [IDC_BTN_MOVEALL, -1]
 ];
 
+[] call FUNC(prgLoad_refresh);
+
 GVAR(itemLists) pushBack [_lstItems, _box];

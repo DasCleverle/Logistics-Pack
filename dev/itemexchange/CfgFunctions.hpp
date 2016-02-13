@@ -17,6 +17,8 @@ class CfgFunctions {
             class btnHeader_MouseDown {};
             class btnHeader_MouseUp {};
             class btnHeader_MouseMoving {};
+
+            class prgLoad_refresh {};
         };
 
         class keybind {
@@ -38,6 +40,8 @@ class CfgFunctions {
             class getItemName {};
             class getItemConfigBase {};
             class getRealItemCount {};
+            class getItemMass {};
+            class getContainerMass {};
             class moveItems {};
 
             class pfhDeleteQueue {};
