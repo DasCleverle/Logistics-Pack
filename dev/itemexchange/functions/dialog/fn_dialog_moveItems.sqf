@@ -9,9 +9,9 @@ compile format ['
     private _sourceBox = missionNamespace getVariable [QGVAR(modal_box) + "%1", objNull];
     private _sourceItemIndex = lbCurSel (_sourceModal controlsGroupCtrl IDC_LST_ITEMS);
 
-    if!(_sourceBox in GVAR(selectedBoxes)) exitWith { systemChat "select box first." };
-    if(count GVAR(selectedBoxes) != 2) exitWith { systemChat "must select 2 boxes." };
-    if(_sourceItemIndex == -1) exitWith { systemChat "must select item to move." };
+    if!(_sourceBox in GVAR(selectedBoxes)) exitWith { [localize LSTRING(SELECT_BOX_THIS)] call FUNC(setMessage); };
+    if(count GVAR(selectedBoxes) != 2) exitWith { [localize LSTRING(SLECET_BOX_2)] call FUNC(setMessage); };
+    if(_sourceItemIndex == -1) exitWith { [localize LSTRING(SELECT_ITEM)] call FUNC(setMessage); };
 
     private _sourceBoxIndex = GVAR(selectedBoxes) find _sourceBox;
     private _targetBoxIndex = [0,1] select (_sourceBoxIndex == 0);

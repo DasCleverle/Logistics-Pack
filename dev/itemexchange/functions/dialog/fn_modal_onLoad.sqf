@@ -6,7 +6,7 @@ params ["_modal"];
 private _box = missionNamespace getVariable [QGVAR(modal_box) + str ctrlIDC _modal, objNull];
 private _boxIndex = _box getVariable QGVAR(boxIndex);
 
-if(isNull _box) exitWith { systemChat "modal box is null"; };
+if(isNull _box) exitWith {};
 
 private _display = ctrlParent _modal;
 private _lstBoxes = _display displayCtrl IDC_LST_BOXES;

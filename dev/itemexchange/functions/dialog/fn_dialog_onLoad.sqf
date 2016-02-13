@@ -13,7 +13,7 @@ _btnHeader ctrlAddEventHandler ["MouseButtonUp", FUNC(btnHeader_MouseUp)];
 _btnHeader ctrlAddEventHandler ["MouseMoving", FUNC(btnHeader_MouseMoving)];
 
 _btnClose ctrlAddEventHandler ["ButtonClick", { closeDialog 0; }];
-_btnClose ctrlSetTooltip "Warning: This will close the whole dialog.";
+_btnClose ctrlSetTooltip localize LSTRING(CLOSE_DIALOG);
 
 _counter = 1;
 {
@@ -40,3 +40,16 @@ GVAR(perFrameHandlers) = [
     [FUNC(pfhRefreshLists),0,[]] call CBA_fnc_addPerFrameHandler,
     [FUNC(pfhDrawDots),0,[]] call CBA_fnc_addPerFrameHandler
 ];
+
+private _grpMessages = _display displayCtrl IDC_GRP_MESSAGES;
+_btnHeader = _grpMessages controlsGroupCtrl IDC_BTN_HEADER;
+private _pos = ctrlPosition _btnHeader;
+_btnHeader ctrlSetText localize LSTRING(MESSAGES);
+_btnHeader ctrlAddEventHandler ["MouseButtonDown", [IDC_GRP_MESSAGES] call FUNC(btnHeader_MouseDown)];
+_btnHeader ctrlAddEventHandler ["MouseButtonUp", FUNC(btnHeader_MouseUp)];
+_btnHeader ctrlAddEventHandler ["MouseMoving", FUNC(btnHeader_MouseMoving)];
+_btnHeader ctrlSetPosition [_pos select 0, _pos select 1, CELLSPAN_W(12), _pos select 3];
+_btnHeader ctrlCommit 0;
+
+_btnClose = _grpMessages controlsGroupCtrl IDC_BTN_CLOSE;
+_btnClose ctrlShow false;

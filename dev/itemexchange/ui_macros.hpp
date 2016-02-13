@@ -11,8 +11,10 @@
 #define IDC_CHK_SELECT      21510
 #define IDC_BTN_SELECT      21511
 #define IDC_PRG_LOAD        21512
+#define IDC_LBL_MESSAGES    21514
 
 #define IDC_GRP_MAIN        21509
+#define IDC_GRP_MESSAGES    21513
 #define IDC_GRP_MODAL       21540
 
 // Positioning
@@ -33,10 +35,13 @@
 #define CELL_WIDTH (GRP_WIDTH / COLUMNS)
 #define CELL_HEIGHT (GRP_HEIGHT / ROWS)
 
+#define CELLSPAN_W(W) ((W) * (CELL_WIDTH - CELL_MARGIN) + ((W) - 1) * CELL_MARGIN)
+#define CELLSPAN_H(H) ((H) * (CELL_HEIGHT - 4/3 * CELL_MARGIN) + ((H) - 1) * 4/3 * CELL_MARGIN)
+
 #define CELL(X, Y) \
     x = (X) * (CELL_WIDTH); \
     y = (Y) * (CELL_HEIGHT)
 
 #define CELLSPAN(W, H) \
-    w = (W) * (CELL_WIDTH - CELL_MARGIN) + ((W) - 1) * CELL_MARGIN; \
-    h = (H) * (CELL_HEIGHT - 4/3 * CELL_MARGIN) + ((H) - 1) * 4/3 * CELL_MARGIN
+    w = CELLSPAN_W(W); \
+    h = CELLSPAN_H(H)

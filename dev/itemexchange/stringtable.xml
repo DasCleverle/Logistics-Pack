@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="DLP">
+	<Package name="ItemExchange">
+		<Container ID="common">
+			<Key ID="STR_CL_ITEMEXCHANGE_SELECT_BOX_THIS">
+				<Original>Please select this box.</Original>
+				<English>Please select this box.</English>
+				<German>Bitte diese Box auswählen.</German>
+			</Key>
+			<Key ID="STR_CL_ITEMEXCHANGE_SLECET_BOX_2">
+				<Original>You must select 2 boxes.</Original>
+				<English>You must select 2 boxes.</English>
+				<German>Bitte 2 Boxen auswählen.</German>
+			</Key>
+			<Key ID="STR_CL_ITEMEXCHANGE_SELECT_ITEM">
+				<Original>Select a item to move.</Original>
+				<English>Select a item to move.</English>
+				<German>Bitte einen Gegenstand auswählen.</German>
+			</Key>
+			<Key ID="STR_CL_ITEMEXCHANGE_CLOSE_DIALOG">
+				<Original>Warning: This will close the whole dialog.</Original>
+				<English>Warning: This will close the whole dialog.</English>
+				<German>Achtung: Dieser Button schließt den gesamten Dialog.</German>
+			</Key>
+			<Key ID="STR_CL_ITEMEXCHANGE_BTN_SELECT">
+				<Original>Select</Original>
+				<English>Select</English>
+				<German>Ausw.</German>
+			</Key>
+			<Key ID="STR_CL_ITEMEXCHANGE_OPEN_MODAL">
+				<Original>Open</Original>
+				<English>Open</English>
+				<German>Öffnen</German>
+			</Key>
+			<Key ID="STR_CL_ITEMEXCHANGE_MESSAGES">
+				<Original>Messages</Original>
+				<English>Messages</English>
+				<German>Benachrichtigungen</German>
+			</Key>
+			<Key ID="STR_CL_ITEMEXCHANGE_KEYBIND">
+				<Original>[IE] Open ItemExchange-Menu</Original>
+				<English>[IE] Open ItemExchange-Menu</English>
+				<German>[IE] ItemExchange-Menü öffnen</German>
+			</Key>
+		</Container>
+	</Package>
+</Project>

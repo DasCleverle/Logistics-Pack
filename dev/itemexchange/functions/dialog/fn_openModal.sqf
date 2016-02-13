@@ -8,7 +8,7 @@ private _boxIndex = lbCurSel (_display displayCtrl IDC_LST_BOXES);
 private _box = missionNamespace getVariable [QGVAR(box) + str _boxIndex, objNull];
 private _idc = GVAR(currentModalIDC) + 1;
 
-if(isNull _box || {_boxIndex in GVAR(modals)}) exitWith { systemChat "couldn't open modal" };
+if(isNull _box || {_boxIndex in GVAR(modals)}) exitWith {};
 
 GVAR(modals) pushBack _boxIndex;
 GVAR(currentModalIDC) = _idc;

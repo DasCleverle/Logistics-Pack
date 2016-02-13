@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"cba_main"};
+        requiredAddons[] = {"cba_main","cl_dlp_main"};
         author[] = {AUTHORS};
         authorUrl = "http://www.gruppe-w.de/";
         VERSION_CONFIG;

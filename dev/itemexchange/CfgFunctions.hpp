@@ -19,6 +19,8 @@ class CfgFunctions {
             class btnHeader_MouseMoving {};
 
             class prgLoad_refresh {};
+
+            class setMessage {};
         };
 
         class keybind {

@@ -4,6 +4,7 @@ class RscControlsGroupNoScrollbars;
 class RscListbox;
 class RscCheckbox;
 class RscProgress;
+class RscText;
 
 class GVAR(ButtonSilent) : RscButton {
     soundEnter[] = {"",0,0};
@@ -77,7 +78,7 @@ class GVAR(grpMain) : RscControlsGroupNoScrollbars {
         class btnOpenModal : RscButton {
             idc = IDC_BTN_OPENMODAL;
             sizeEx = CELL_FONTSIZE;
-            text = "Open Modal";
+            text = CSTRING(OPEN_MODAL);
 
             onButtonClick = _this call FUNC(openModal);
 
@@ -114,7 +115,7 @@ class GVAR(grpModal) : RscControlsGroupNoScrollbars {
 
         class btnSelect : GVAR(ButtonSilent) {
             idc = IDC_BTN_SELECT;
-            text = "Select";
+            text = CSTRING(BTN_SELECT);
             sizeEx = CELL_FONTSIZE;
             shadow = 0;
             style = 0;
@@ -165,6 +166,34 @@ class GVAR(grpModal) : RscControlsGroupNoScrollbars {
     };
 };
 
+class GVAR(grpMessages) : RscControlsGroupNoScrollbars {
+    idc = IDC_GRP_MESSAGES;
+
+    x = DIALOG_X;
+    y = DIALOG_Y + GRP_HEIGHT + 4/3 * CELL_MARGIN;
+    w = GRP_WIDTH;
+    h = 0.25 * GRP_HEIGHT;
+
+    class controls {
+
+        class background : GVAR(background) {
+            h = 0.25 * GRP_HEIGHT;
+        };
+
+        class grpHeader : GVAR(grpHeader) {};
+
+        class lblMessage : RscText {
+            idc = IDC_LBL_MESSAGES;
+
+            text = "";
+
+            sizeEx = CELL_FONTSIZE;
+            CELL(0.5,0);
+            CELLSPAN(11,3);
+        };
+    };
+};
+
 
 class GVAR(dialog) {
     idd = IDD_ITEMEXCHANGE;
@@ -173,5 +202,7 @@ class GVAR(dialog) {
 
     class controls {
         class grpMain : GVAR(grpMain) {};
+
+        class grpMessages: GVAR(grpMessages) {};
     };
 };
