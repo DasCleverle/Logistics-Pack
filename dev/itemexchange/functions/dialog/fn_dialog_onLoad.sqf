@@ -34,3 +34,9 @@ _counter = 1;
         _counter = _counter + 1;
     };
 } foreach (player nearSupplies BOX_DISTANCE);
+
+GVAR(perFrameHandlers) = [
+    [FUNC(pfhDeleteQueue),0,[]] call CBA_fnc_addPerFrameHandler,
+    [FUNC(pfhRefreshLists),0,[]] call CBA_fnc_addPerFrameHandler,
+    [FUNC(pfhDrawDots),0,[]] call CBA_fnc_addPerFrameHandler
+];

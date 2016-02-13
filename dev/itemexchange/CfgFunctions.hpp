@@ -46,6 +46,7 @@ class CfgFunctions {
 
             class pfhDeleteQueue {};
             class pfhRefreshLists {};
+            class pfhDrawDots {};
         };
     };
 };
