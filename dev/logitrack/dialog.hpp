@@ -67,11 +67,11 @@ class GVAR(dialog) {
                     colorText[] = {COLOR_BLACK};
                     colorDisabled[] = {COLOR_BLACK};
                     colorScrollbar[] = {COLOR_WHITE};
-                    colorSelect[] = {COLOR_BLACK};
-                    colorSelect2[] = {COLOR_BLACK};
+                    colorSelect[] = {COLOR_WHITE};
+                    colorSelect2[] = {COLOR_WHITE};
                     colorSelectBackground[] = {COLOR_TR};
                     colorSelectBackground2[] = {COLOR_TR};
-                    colorBackground[] ={0,0,0,0.6};
+                    colorBackground[] ={0,0,0,0.4};
                     colorPicture[] ={COLOR_TR};
                     colorPictureSelected[] = {COLOR_TR};
                     colorPictudeDisabled[] ={COLOR_TR};

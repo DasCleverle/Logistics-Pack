@@ -2,4 +2,4 @@
 
 if(!GVAR(active) || { !HAS_TRACKER } || { dialog }) exitWith {};
 
-createDialog QGVAR(dialog);
+(findDisplay 46) createDisplay QGVAR(dialog);

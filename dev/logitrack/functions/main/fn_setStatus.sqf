@@ -7,7 +7,7 @@ if(_status < MINSTATUS || { _status > MAXSTATUS }) exitWith { ERROR_WITH_TITLE("
 player setVariable [QGVAR(status), _status, true];
 
 if(_isHotkey) then {
-    hint localize format [LSTRING(STATUSHINT), name player, _status];
+    hint format [localize LSTRING(STATUSHINT), name player, _status];
 };
 
 [player, _status] remoteExecCall [QUOTE(FUNC(setStatusRemote)), side player, false];

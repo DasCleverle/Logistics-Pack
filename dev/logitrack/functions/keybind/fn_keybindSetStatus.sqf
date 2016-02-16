@@ -3,6 +3,6 @@
 params ["_status"];
 
 compile format ['
-    if(!QGVAR(active) || { !HAS_TRACKER }) exitWith {};
+    if(!GVAR(active) || { !HAS_TRACKER }) exitWith {};
     [%1, true] call FUNC(setStatus);
 ',_status];
