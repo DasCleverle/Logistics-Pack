@@ -1,8 +1,6 @@
 #include "script_component.hpp"
 
-GVAR(active) = true;
-
-private ["_colorsDefault", "_tooltipsDefault", "_elementCount"];
+private ["_colorsDefault", "_tooltipsDefault", "_elementCount", "_isValid", "_source"];
 
 _colorsDefault = [
     [COLOR_GREEN],
@@ -21,9 +19,18 @@ for "_i" from MINSTATUS to MAXSTATUS do {
 };
 
 _elementCount = MAXSTATUS - MINSTATUS + 1;
-private _isValid = params [["_colors", _colorsDefault, [[]], _elementCount], ["_tooltips", _tooltipsDefault, [[]], _elementCount]];
+if(!(isNil "_this") && { IS_ARRAY(_this) } && { count _this == 2 }) then {
+    _source = _this;
+}
+else {
+    _source = [_colorsDefault, _tooltipsDefault];
+};
 
-if(!_isValid) exitWith { ERROR_WITH_TITLE("DLP Logitrack", "Not enough values for color or toolips have been provided.") };
+_isValid = _source params [["_colors", _colorsDefault, [[]], _elementCount], ["_tooltips", _tooltipsDefault, [[]], _elementCount]];
+if(!_isValid) exitWith {
+    ERROR_WITH_TITLE("DLP Logitrack", "Not enough values for color or toolips have been provided.");
+};
 
 GVAR(colors) = _colors;
 GVAR(tooltips) = _tooltips;
+GVAR(active) = true;
