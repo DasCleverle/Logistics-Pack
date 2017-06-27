@@ -7,6 +7,7 @@
 #define QDATAPATH(FILE) QUOTE(DATAPATH(FILE))
 #define FUNCFILE(CLASS) PATHTOF(functions\CLASS)
 
+#undef QEGVAR
 #define QEGVAR(var1,var2) QUOTE(EGVAR(var1,var2))
 
 #define COLOR_TR         0,0,0,0
