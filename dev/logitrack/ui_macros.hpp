@@ -35,4 +35,4 @@
         onMouseEnter = QUOTE([status] call FUNC(btnStatus_MouseEnter)); \
         onMouseExit = QUOTE(call FUNC(btnStatus_MouseExit)); \
         onButtonClick = QUOTE([status] call FUNC(setStatus)); \
-    }; \
+    }

@@ -42,14 +42,14 @@ class GVAR(dialog) {
                     sizeEx = 2 * CELL_FONTSIZE;
                 };
 
-                STATUSBUTTON(1)
-                STATUSBUTTON(2)
-                STATUSBUTTON(3)
-                STATUSBUTTON(4)
-                STATUSBUTTON(5)
-                STATUSBUTTON(6)
-                STATUSBUTTON(7)
-                STATUSBUTTON(8)
+                STATUSBUTTON(1);
+                STATUSBUTTON(2);
+                STATUSBUTTON(3);
+                STATUSBUTTON(4);
+                STATUSBUTTON(5);
+                STATUSBUTTON(6);
+                STATUSBUTTON(7);
+                STATUSBUTTON(8);
 
                 class lblTooltip : GVAR(Label) {
                     idc = IDC_LBL_TOOLTIP;

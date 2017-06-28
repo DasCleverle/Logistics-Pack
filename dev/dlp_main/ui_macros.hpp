@@ -18,5 +18,5 @@
     y = (Y) * (CELL_HEIGHT + 4/3 * CELL_MARGIN)
 
 #define CELLSPAN(width,height) \
-    w = (width) * CELL_WIDTH + ((widthW) - 1) * CELL_MARGIN; \
+    w = (width) * CELL_WIDTH + ((width) - 1) * CELL_MARGIN; \
     h = (heightH) * CELL_HEIGHT + ((height) - 1) * 4/3 * CELL_MARGIN
