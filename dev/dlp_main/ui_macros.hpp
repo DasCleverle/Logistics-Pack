@@ -19,4 +19,4 @@
 
 #define CELLSPAN(width,height) \
     w = (width) * CELL_WIDTH + ((width) - 1) * CELL_MARGIN; \
-    h = (heightH) * CELL_HEIGHT + ((height) - 1) * 4/3 * CELL_MARGIN
+    h = (height) * CELL_HEIGHT + ((height) - 1) * 4/3 * CELL_MARGIN
