@@ -26,13 +26,13 @@ class GVAR(grpHeader) : RscControlsGroupNoScrollbars {
     idc = -1;
     x = 0;
     y = 0;
-    CELLSPAN(12,1);
+    DIMENSION(12,1);
 
     class controls {
         class btnHeader : GVAR(ButtonSilent) {
             idc = IDC_BTN_HEADER;
             CELL(0,0);
-            CELLSPAN(11,1);
+            DIMENSION(11,1);
 
             sizeEx = CELL_FONTSIZE;
 
@@ -44,7 +44,7 @@ class GVAR(grpHeader) : RscControlsGroupNoScrollbars {
         class btnClose : RscButton {
             idc = IDC_BTN_CLOSE;
             CELL(11,0);
-            CELLSPAN(1,1);
+            DIMENSION(1,1);
 
             text = "X";
             sizeEx = CELL_FONTSIZE;
@@ -72,7 +72,7 @@ class GVAR(grpMain) : RscControlsGroupNoScrollbars {
             onLBDblClick = _this call FUNC(openModal);
 
             CELL(0.5,1.5);
-            CELLSPAN(11,9.5);
+            DIMENSION(11,9.5);
         };
 
         class btnOpenModal : RscButton {
@@ -83,7 +83,7 @@ class GVAR(grpMain) : RscControlsGroupNoScrollbars {
             onButtonClick = _this call FUNC(openModal);
 
             CELL(0.5,11.5);
-            CELLSPAN(11,1);
+            DIMENSION(11,1);
         };
     };
 };
@@ -103,14 +103,14 @@ class GVAR(grpModal) : RscControlsGroupNoScrollbars {
             idc = IDC_LST_ITEMS;
 
             CELL(0.5,1.5);
-            CELLSPAN(11,8.5);
+            DIMENSION(11,8.5);
         };
 
         class chkSelect : RscCheckbox {
             idc = IDC_CHK_SELECT;
 
             CELL(0.5,10.5);
-            CELLSPAN(1,1);
+            DIMENSION(1,1);
         };
 
         class btnSelect : GVAR(ButtonSilent) {
@@ -121,7 +121,7 @@ class GVAR(grpModal) : RscControlsGroupNoScrollbars {
             style = 0;
 
             CELL(1.2,10.5);
-            CELLSPAN(5,1);
+            DIMENSION(5,1);
 
             colorBackground[] = {COLOR_TR};
             colorBackgroundActive[] = {COLOR_TR};
@@ -134,7 +134,7 @@ class GVAR(grpModal) : RscControlsGroupNoScrollbars {
             sizeEx = CELL_FONTSIZE;
 
             CELL(5.5,10.5);
-            CELLSPAN(2,1);
+            DIMENSION(2,1);
         };
 
         class btnMove10 : RscButton {
@@ -143,7 +143,7 @@ class GVAR(grpModal) : RscControlsGroupNoScrollbars {
             sizeEx = CELL_FONTSIZE;
 
             CELL(7.5,10.5);
-            CELLSPAN(2,1);
+            DIMENSION(2,1);
         };
 
         class btnMoveAll : RscButton {
@@ -152,7 +152,7 @@ class GVAR(grpModal) : RscControlsGroupNoScrollbars {
             sizeEx = CELL_FONTSIZE;
 
             CELL(9.5,10.5);
-            CELLSPAN(2,1);
+            DIMENSION(2,1);
         };
 
         class prgLoad : RscProgress {
@@ -161,7 +161,7 @@ class GVAR(grpModal) : RscControlsGroupNoScrollbars {
             colorFrame[] = {COLOR_WHITE};
 
             CELL(0.5,11.5);
-            CELLSPAN(11,1);
+            DIMENSION(11,1);
         };
     };
 };
@@ -189,7 +189,7 @@ class GVAR(grpMessages) : RscControlsGroupNoScrollbars {
 
             sizeEx = CELL_FONTSIZE;
             CELL(0.5,0);
-            CELLSPAN(11,3);
+            DIMENSION(11,3);
         };
     };
 };

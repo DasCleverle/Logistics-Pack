@@ -35,16 +35,16 @@
 #define CELL_WIDTH (GRP_WIDTH / COLUMNS)
 #define CELL_HEIGHT (GRP_HEIGHT / ROWS)
 
-#define CELLSPAN_W(width) ((width) * (CELL_WIDTH - CELL_MARGIN) + ((width) - 1) * CELL_MARGIN)
-#define CELLSPAN_H(height) ((height) * (CELL_HEIGHT - 4/3 * CELL_MARGIN) + ((height) - 1) * 4/3 * CELL_MARGIN)
+#define CSPAN_W(width) ((width) * (CELL_WIDTH - CELL_MARGIN) + ((width) - 1) * CELL_MARGIN)
+#define CSPAN_H(height) ((height) * (CELL_HEIGHT - 4/3 * CELL_MARGIN) + ((height) - 1) * 4/3 * CELL_MARGIN)
 
 #undef CELL
-#undef CELLSPAN
+#undef DIMENSION
 
 #define CELL(X,Y) \
     x = (X) * (CELL_WIDTH); \
     y = (Y) * (CELL_HEIGHT)
 
-#define CELLSPAN(width,height) \
-    w = CELLSPAN_W(width); \
-    h = CELLSPAN_H(height)
+#define DIMENSION(width,height) \
+    w = CSPAN_W(width); \
+    h = CSPAN_H(height)
