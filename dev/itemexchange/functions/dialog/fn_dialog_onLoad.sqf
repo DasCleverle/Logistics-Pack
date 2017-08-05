@@ -17,7 +17,7 @@ _btnClose ctrlSetTooltip localize LSTRING(CLOSE_DIALOG);
 
 _counter = 1;
 {
-    if(getText (configFile >> "CfgVehicles" >> typeOf _x >> "vehicleClass") == "Ammo") then {
+    if((typeOf _x) isKindOf "ReammoBox_F" && getNumber (configFile >> "CfgVehicles" >> (typeOf _x) >> "disableInventory") == 0) then {
         private _displayName = getText(configFile >> "CfgVehicles" >> typeOf _x >> "displayName");
         private _item = _lstBoxes lbAdd format ["(%2) %1", _displayName, _counter];
         private _color = [] call FUNC(getRandomColor);
@@ -48,7 +48,7 @@ _btnHeader ctrlSetText localize LSTRING(MESSAGES);
 _btnHeader ctrlAddEventHandler ["MouseButtonDown", [IDC_GRP_MESSAGES] call FUNC(btnHeader_MouseDown)];
 _btnHeader ctrlAddEventHandler ["MouseButtonUp", FUNC(btnHeader_MouseUp)];
 _btnHeader ctrlAddEventHandler ["MouseMoving", FUNC(btnHeader_MouseMoving)];
-_btnHeader ctrlSetPosition [_pos select 0, _pos select 1, CELLSPAN_W(12), _pos select 3];
+_btnHeader ctrlSetPosition [_pos select 0, _pos select 1, CSPAN_W(12), _pos select 3];
 _btnHeader ctrlCommit 0;
 
 _btnClose = _grpMessages controlsGroupCtrl IDC_BTN_CLOSE;

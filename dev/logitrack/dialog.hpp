@@ -20,7 +20,7 @@ class GVAR(Button): RscButton {
 
 class GVAR(dialog) {
     idd = IDD_LOGITRACKER;
-    onLoad = _this call FUNC(dialog_onLoad);
+    onLoad = QUOTE(_this call FUNC(dialog_onLoad));
 
     class controls {
         class picBackground : RscPicture {

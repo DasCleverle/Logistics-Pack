@@ -4,12 +4,12 @@
 #define PREFIX CL
 #define MAINCOMPONENT dlp_main
 
-#define MAINAUTHOR "[W] DasCleverle"
-#define AUTHORS MAINAUTHOR
+#define MAINAUTHOR "DasCleverle"
+#define AUTHORS "[W] Rallen"
 
 #define MAJOR 2
 #define MINOR 0
-#define PATCHLVL 1
+#define PATCHLVL 2
 
 #ifdef DEV
     #define VERSION MAJOR.MINOR.PATCHLVL-dev.DEV

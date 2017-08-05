@@ -18,10 +18,10 @@
 #define IDC_GRP_MODAL       21540
 
 // Positioning
-#define DIALOG_X (safeZoneX + 1.5 * GUIMIN_3_2(1.2, 25))
-#define DIALOG_Y (safeZoneY + 4/3 * 1.5 * GUIMIN_3_2(1.2, 25))
-#define DIALOG_WIDTH (0.75 * GUIMIN_3_2(1.2, 2))
-#define DIALOG_HEIGHT (1.35 * GUIMIN_3_2(1.2, 2))
+#define DIALOG_X (safeZoneX + 1.5 * GUIMIN_3_2(1.2,25))
+#define DIALOG_Y (safeZoneY + 4/3 * 1.5 * GUIMIN_3_2(1.2,25))
+#define DIALOG_WIDTH (0.75 * GUIMIN_3_2(1.2,2))
+#define DIALOG_HEIGHT (1.35 * GUIMIN_3_2(1.2,2))
 
 #define GRP_X (0)
 #define GRP_Y (0)
@@ -31,17 +31,20 @@
 #define COLUMNS 12
 #define ROWS 13
 
-#define CELL_MARGIN (0.1 * GUIMIN_3_2(1.2, 25))
+#define CELL_MARGIN (0.1 * GUIMIN_3_2(1.2,25))
 #define CELL_WIDTH (GRP_WIDTH / COLUMNS)
 #define CELL_HEIGHT (GRP_HEIGHT / ROWS)
 
-#define CELLSPAN_W(W) ((W) * (CELL_WIDTH - CELL_MARGIN) + ((W) - 1) * CELL_MARGIN)
-#define CELLSPAN_H(H) ((H) * (CELL_HEIGHT - 4/3 * CELL_MARGIN) + ((H) - 1) * 4/3 * CELL_MARGIN)
+#define CSPAN_W(width) ((width) * (CELL_WIDTH - CELL_MARGIN) + ((width) - 1) * CELL_MARGIN)
+#define CSPAN_H(height) ((height) * (CELL_HEIGHT - 4/3 * CELL_MARGIN) + ((height) - 1) * 4/3 * CELL_MARGIN)
 
-#define CELL(X, Y) \
+#undef CELL
+#undef DIMENSION
+
+#define CELL(X,Y) \
     x = (X) * (CELL_WIDTH); \
     y = (Y) * (CELL_HEIGHT)
 
-#define CELLSPAN(W, H) \
-    w = CELLSPAN_W(W); \
-    h = CELLSPAN_H(H)
+#define DIMENSION(width,height) \
+    w = CSPAN_W(width); \
+    h = CSPAN_H(height)

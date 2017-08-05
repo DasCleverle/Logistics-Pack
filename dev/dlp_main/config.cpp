@@ -7,6 +7,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"cba_main"};
         author = MAINAUTHOR;
+        authors[] = {AUTHORS};
         url = "https://www.gruppe-w.de/";
         VERSION_CONFIG;
     };

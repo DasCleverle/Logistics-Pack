@@ -1,6 +1,7 @@
 *.py
 *.lnk
 *.bbcode
+*.pbo
 
 [rR]esources/
 [bB]uild/
